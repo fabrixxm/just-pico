@@ -28,6 +28,10 @@ main {
   height: auto;
 }
 
+.pure-menu h4 { font-weight: normal; }
+.pure-menu #logo img { max-width: 100px; }
+.pure-menu-item { height: auto; }
+
 /*
 Add transition to containers so they can push in and out.
 */
@@ -261,12 +265,15 @@ small screens.
   font-weight: 500;
   letter-spacing: 0.1em;
 }
+.posts {
+  display: flex;
+}
 .post {
   background: #f4f4f4;
-  border: 2px solid #999;
   padding: 0 1.5em;
   position: relative;
-  margin: 0 0 2em 76px;
+  flex-grow: 2;
+  border: 1px solid #CCC;
 }
 .post-avatar {
   border-radius: 50px;
@@ -282,14 +289,14 @@ small screens.
 }
 .post-date {
   background: #f4f4f4;
-  border: 2px solid #999;
+  border: 1px solid #CCC;
   height: 76px;
-  position: absolute;
   width: 76px;
+  margin-right: 1em;
 }
 .post-date .month {
-  background: #fe1;
-  border-bottom: 2px solid #999;
+  background: #fffbc0;
+  border-bottom: 1px solid #CCC;
   color: #444;
   font-size: 12px;
   line-height: 22px;
@@ -306,7 +313,6 @@ small screens.
   bottom: 0;
   font-size: 12px;
   line-height: 22px;
-  position: absolute;
   text-align: center;
   width: 100%;
 }
@@ -354,11 +360,12 @@ small screens.
   vertical-align: top;
   width: 50%;
 }
-.blog-item .meta-time {
+.blog-item .meta-time, 
+.blog-item .meta-author {
   color: #aaa;
   float: right;
   font-size: 12px;
-  margin: 0 -15px 0 0;
+  margin: 0 -15px 0 30px;
 }
 
 /*
@@ -404,7 +411,7 @@ small screens.
 #footer {
   bottom: 0;
   font-size: 0.8rem;
-  margin-bottom: 10px;
+  margin: 1em;
   text-align: center;
 }
 #footer a {
