@@ -37,7 +37,7 @@
         {% endif %}
         <ul class="pure-menu-list">
           {% for page in pages if page.title %}
-            {% if not (page.id starts with "blog/") %}
+            {% if not (page.id starts with "blog/" or page.id starts with "_" or meta.hidden) %}
               <li class="pure-menu-item {% if page.id == current_page.id %}pure-menu-selected{% endif %}">
                 <a href="{{ page.url }}" class="pure-menu-link">{{ page.title }}</a>
               </li>
