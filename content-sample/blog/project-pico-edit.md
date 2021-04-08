@@ -5,7 +5,7 @@ Author: Mat
 Date: 3 April 2016
 Template: blog-item
 Placing: 1
-Tags: php, pico, project
+Tags: [php, pico, project]
 */
 
 Good News, Everyone!

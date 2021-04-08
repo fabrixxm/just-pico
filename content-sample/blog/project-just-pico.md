@@ -5,7 +5,7 @@ Author: Mat
 Date: 24 April 2016
 Placing: 1
 Template: blog-item
-Tags: news
+Tags: [news]
 */
 
 Don't you know [Pico CMS](http://picocms.org/)?

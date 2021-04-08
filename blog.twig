@@ -22,13 +22,15 @@
               <header class="post-header">
                 <h2 class="post-title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
                 <p class="post-meta">
-                  Author: <a href="#" class="post-author">{{ page.author }}</a> &ndash;
-                  {% set tags = page.meta['tags'] | split( ',' ) %}
-                  {% for tag in tags %}
-                    {% if not tag is empty %}
-                      <a href="#{{ tag }}" class="post-tag">{{ tag }}</a>
-                    {% endif %}
-                  {% endfor %}
+                  Author: <a href="#" class="post-author">{{ page.author }}</a> 
+                  {% if meta.tags %}
+                    &ndash;
+                                {% for tag in meta.tags %}
+                                  {% if not tag is empty %}
+                                    <a href="#{{ tag }}" class="post-tag">{{ tag }}</a>
+                                  {% endif %}
+                                {% endfor %}
+                  {% endif %}
                 </p>
               </header>
               <div class="post-description">
